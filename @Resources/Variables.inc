@@ -14,7 +14,7 @@
 ; Preinstalled fonts: Quicksand | Anurati | Aquatico | Fira Sans
 ; You can also use any font you have installed on your system
 ; CHANGING THE CLOCKFONT
-; Uncomment ClockFont and follow the instructions in .../Clock/Meters.inc if you want to use custom fonts.
+; Uncomment ClockFont and follow the instructions in .../Clock/Meters.inc (Changing the ClockFont) if you want to use custom fonts.
 ; ClockFont=
 ClockFont0=Quicksand
 ClockFont1=Anurati
