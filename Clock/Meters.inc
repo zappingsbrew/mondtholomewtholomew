@@ -12,6 +12,8 @@ DynamicVariables=1
 FontWeight=#FontWeight#
 
 [DayStyle]
+; CHANGING THE CLOCKFONT
+; Change this to "FontFace=#ClockFont" and follow the instructions in variables.inc (Changing the ClockFont) if you want to use custom fonts.
 FontFace=[#ClockFont[#ClockFontIdx]]
 FontSize=(40 * #Scale#)
 InlinePattern=#ClockInlinePattern#
