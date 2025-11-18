@@ -65,7 +65,7 @@ Mondtholomew but it work
 - Uses the local language format for dates
 - Uses WebNowPlaying for browser and Spotify media info
   - Can be switched back to normal NowPlaying for local music players
-- Included visualizer!!
+- Visualizer included!!
 
 You might also want to check out my [other skins](https://github.com/zappingsbrew?tab=repositories&q=topic%3Arainmeter-skin&type=&language=&sort=), which include a [robux rework](https://github.com/zappingsbrew/roblux).
 
