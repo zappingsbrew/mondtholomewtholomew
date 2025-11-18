@@ -6,7 +6,7 @@ Mondtholomew but it work
 
 ## Table of contents
 
-1. [Mond Gallery](#gallery) - screenshots people have sent when asking for the (original) skin
+1. [Mond Gallery](#mond-gallery) - screenshots people have sent when asking for the (original) skin
 2. [Features](#features) - features of Mondtholomewtholomew
 3. [Installation](#installation) - how to install Mondtholomewtholomew
 
@@ -74,9 +74,10 @@ You might also want to check out my [other skins](https://github.com/zappingsbre
 How to install Mondtholomewtholomew.
 
 ### Installing Mondtholomewtholomew manually
+
 Read the [install instructions](https://github.com/zappingsbrew/mondtholomewtholomew/wiki#installing-mondtholomewtholomew) on the [Mondtholomewtholomew wiki](https://github.com/zappingsbrew/mondtholomewtholomew/wiki).
 
-## REISIR'S WISHES:
+## REISIR'S WISHES
 
 - [ ] Player duration formatting for durations over an hour
 - [ ] Codebase cleanup it's a mess!!!
