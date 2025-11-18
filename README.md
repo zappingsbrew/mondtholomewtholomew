@@ -65,7 +65,7 @@ Mondtholomew but it work
 - Uses the local language format for dates
 - Uses WebNowPlaying for browser and Spotify media info
   - Can be switched back to normal NowPlaying for local music players
-- Included visualizer!!
+- Visualizer included!!
 
 You might also want to check out my [other skins](https://github.com/zappingsbrew?tab=repositories&q=topic%3Arainmeter-skin&type=&language=&sort=), which include a [robux rework](https://github.com/zappingsbrew/roblux).
 
@@ -91,5 +91,5 @@ Read the [install instructions](https://github.com/zappingsbrew/mondtholomewthol
 - AudioLevel FFT math from [@kodikuu](https://github.com/kodikuu)
 - [WebNowPlaying-Redux](https://github.com/keifufu/WebNowPlaying-Redux-Rainmeter) plugin by [@keifufu](https://github.com/keifufu) & [@tjhrulz](https://github.com/tjhrulz)
 - [Mouse](https://github.com/NighthawkSLO/Mouse.dll) plugin by [@NighthawkSLO](https://github.com/NighthawkSLO)
-- Clock font toggle functionality thanks to [Yincognito](https://www.deviantart.com/yincognyto)
+- Clock Font Toggle functionality by [Yincognito](https://www.deviantart.com/yincognyto)
 - Modified Anurati Free font with ÄÖÅ from a suspicious USB drive left on Reisir's doorstep
