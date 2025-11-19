@@ -1,43 +1,28 @@
-name: Auto Latest RMSkin
-
+name: Create Latest RMSkin
 on:
-  release:
-    types: [published]
+  workflow_dispatch:  # allows manual run
 
 jobs:
-  create-latest-rmskin:
+  create-latest:
     runs-on: ubuntu-latest
     steps:
-      # Step 1: Checkout the repo
-      - name: Checkout repository
+      - name: Checkout repo
         uses: actions/checkout@v3
 
-      # Step 2: Download the release assets
-      - name: Download release assets
-        uses: softprops/action-gh-release@v1
-        with:
-          files: |
-            *.rmskin
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      # Step 3: Find the latest uploaded RMSkin
-      - name: Find RMSkin file
-        id: findfile
+      - name: Download assets of a specific release
         run: |
-          FILE=$(ls *.rmskin | sort -V | tail -n1)
-          echo "RMSKIN_FILE=$FILE" >> $GITHUB_ENV
+          RELEASE_TAG="v1.4.0"  # set the tag of the release you want
+          gh release download "$RELEASE_TAG" --pattern "*.rmskin"
 
-      # Step 4: Duplicate and rename as -latest.rmskin
       - name: Duplicate as latest
         run: |
-          cp "$RMSKIN_FILE" "mondtholomewtholomew-latest.rmskin"
-          ls -lh
+          FILE=$(ls *.rmskin | sort -V | tail -n1)
+          cp "$FILE" "mondtholomewtholomew-latest.rmskin"
 
-      # Step 5: Upload the latest RMSkin back to the release
-      - name: Upload latest RMSkin
+      - name: Upload latest RMSkin to the release
         uses: softprops/action-gh-release@v1
         with:
+          tag_name: v1.4.0   # same tag as above
           files: mondtholomewtholomew-latest.rmskin
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
