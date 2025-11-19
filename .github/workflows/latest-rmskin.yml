@@ -1,0 +1,43 @@
+name: Auto Latest RMSkin
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  create-latest-rmskin:
+    runs-on: ubuntu-latest
+    steps:
+      # Step 1: Checkout the repo
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Step 2: Download the release assets
+      - name: Download release assets
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            *.rmskin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Step 3: Find the latest uploaded RMSkin
+      - name: Find RMSkin file
+        id: findfile
+        run: |
+          FILE=$(ls *.rmskin | sort -V | tail -n1)
+          echo "RMSKIN_FILE=$FILE" >> $GITHUB_ENV
+
+      # Step 4: Duplicate and rename as -latest.rmskin
+      - name: Duplicate as latest
+        run: |
+          cp "$RMSKIN_FILE" "mondtholomewtholomew-latest.rmskin"
+          ls -lh
+
+      # Step 5: Upload the latest RMSkin back to the release
+      - name: Upload latest RMSkin
+        uses: softprops/action-gh-release@v1
+        with:
+          files: mondtholomewtholomew-latest.rmskin
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
